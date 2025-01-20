@@ -1,0 +1,45 @@
+site_name: Squad Limaozine 
+
+repo_name: squad-limaozine-trainees-engNet
+repo_url: https://github.com/JeffersonSenaa/squad-limaozine-trainees-engNet.git
+
+theme: 
+  language: pt-BR
+  icon:
+    repo: fontawesome/brands/github
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+      auto_title: true
+      linenums: true
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+# plugins:
+#   - search
+#   - git-revision-date-localized
+
+extra_css:
+  - stylesheets/extra.css
+    
+nav:
+  - Início: index.md
+    
