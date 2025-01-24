@@ -15,12 +15,7 @@ Essa técnica foi usada no levantamento e refinamento de requisitos para garanti
 
 ![Rich Picture](./img/rich_picture.jpg)
 
-## Diagrama de Ishikawa
-O Diagrama de Ishikawa, também conhecido como Diagrama de Causa e Efeito, é uma ferramenta de análise utilizada para identificar e organizar as possíveis causas de um problema. Essa técnica foi aplicada durante a elicitação de requisitos para identificar a raiz de desafios apresentados pelas partes interessadas.
-
-Essa abordagem sistemática auxiliou na priorização de requisitos, focando na resolução de problemas críticos identificados durante a análise.
-
-![Diagrama](./img/fishbone_diagram.png)
+## Brainstorm
 
 
 ## Histórico de Versões

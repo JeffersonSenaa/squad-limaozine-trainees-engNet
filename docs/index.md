@@ -1,7 +1,7 @@
 # Limaozine Trainees
 
 ## Descrição
-Este projeto foi desenvolvido como parte da primeira etapa do processo trainee da EngNet. Nesta etapa, o objetivo é explorar conceitos fundamentais de engenharia de software com foco em levantamento de requisitos, análise de casos de uso e User story mapping, aplicando essas práticas no contexto do aplicativo de transporte Moovit.
+Este projeto é desenvolvido como parte da primeira etapa do processo trainee da EngNet. Nesta etapa, o objetivo é explorar conceitos fundamentais de engenharia de software com foco em levantamento de requisitos, análise de casos de uso e User story mapping, aplicando essas práticas no contexto do aplicativo de transporte Moovit.
 
 ## Objetivos
 

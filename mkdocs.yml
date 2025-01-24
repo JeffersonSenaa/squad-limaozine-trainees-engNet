@@ -42,5 +42,15 @@ extra_css:
     
 nav:
   - Início: index.md
-  - Elicitação: rich_picture.md
+  - Visão do Produto: 
+      - Visão do Produto: visao-produto.md
+      - Rich Picture: rich-picture.md
+  - Requisitos: 
+      - PBB - Product Backlog Building: product-backlog.md
+      - Backlog: backlog.md 
+  - Modelagem: 
+      - User Story Map: user-story.md
+  - Priorização:
+      - Moscow: moscow.md
+  - Rastreabilidade: rastreabilidade.md
     
