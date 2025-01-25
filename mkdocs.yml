@@ -20,7 +20,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   name: material
-  # logo: 
+  logo: https://raw.githubusercontent.com/JeffersonSenaa/squad-limaozine-trainees-engNet/refs/heads/main/docs/img/moovit.png 
   features:
     - navigation.tabs
     - navigation.tabs.sticky

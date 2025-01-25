@@ -1,7 +1,9 @@
 # User Story Map
 
 ## Definição 
+Um User Story Map é uma ferramenta visual usada para planejar e organizar as funcionalidades de um produto ou sistema do ponto de vista do usuário. Ele ajuda equipes a compreenderem a experiência do usuário ao interagir com o produto, permitindo que as funcionalidades sejam priorizadas e alinhadas às metas de negócio. 
 
+<!-- ![sdf](./img/Captura%20de%20tela%20de%202025-01-25%2001-23-46.png) -->
 
 ## Diagramas
 
