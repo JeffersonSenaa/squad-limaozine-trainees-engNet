@@ -32,14 +32,16 @@ A abordagem utilizada seguiu os seguintes passos:
 ## Entregáveis
 
 Os artefatos produzidos nesta etapa incluem:
-## Levantamento de dados
 
+- Brainstorm: Vídeo do levantamento de ideias de funcionalidades do app através da chuva de ideias. 
+- Rich picture: Diagrama que representa, de forma criativa e não estruturada, os elementos-chave de uma situação problemática.
+- Diagrama de causa e Efeito: Diagrama que identifica as dificuldades enfrentadas e o problema que a solução resolve.
 - Backlog de Requisitos: Documentação clara dos requisitos levantados, com a separação entre funcionais e não funcionais.
 - Story Map: Mapa visual das funcionalidades principais e como elas se conectam à experiência do usuário.
+- Product Backlog Building: Canvas PBB para elicitação de Requisitos e Features.
 - Casos de Uso: Diagramas e descrições textuais detalhando os principais casos de uso identificados.
-- Rich picture: Diagrama que representa, de forma criativa e não estruturada, os elementos-chave de uma situação problemática..
 - Matriz de Rastreabilidade: Documento ou ferramenta que relaciona requisitos a outros artefatos do projeto, como casos de uso, código, testes ou entregas.
-- Brainstorm: Vídeo do levantamento de ideias de funcionalidades do app através da chuva de ideias. 
+
 
 
 ## Trainees

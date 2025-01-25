@@ -16,6 +16,8 @@ theme:
         name: Switch to dark mode
 
     - scheme: slate
+      primary: orange
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -45,15 +47,13 @@ extra_css:
     
 nav:
   - Início: index.md
-  - Visão do Produto: 
+  - Levantamento: 
       - Visão do Produto: visao-produto.md
-      - Rich Picture: rich-picture.md
-  - Requisitos: 
-      - PBB - Product Backlog Building: product-backlog.md
-      - Backlog: backlog.md 
+      - Rich Picture/Brainstorm: rich-picture.md
   - Modelagem: 
       - User Story Map: user-story.md
-  - Priorização:
-      - Moscow: moscow.md
+      - Product Backlog Building: pbb.md
+      - Priorização: moscow.md
+      - Backlog: backlog.md
   - Rastreabilidade: rastreabilidade.md
     
