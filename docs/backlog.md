@@ -95,3 +95,10 @@ Segue a tabela com os requisitos numerados e sua rastreabilidade:
 | **RNF23** | Deve haver suporte para layouts de alto contraste configuráveis pelo usuário.                                               | Acessibilidade     |
 | **RNF24** | O sistema deve permitir que o usuário escolha entre múltiplos modos de entrada, como teclado, mouse e dispositivos táteis.  | Acessibilidade     |
 | **RNF25** | Deve ser fornecido um guia de acessibilidade em formato digital, com instruções detalhadas sobre como usar o sistema.       | Acessibilidade     |
+
+
+## Histórico de Versões
+
+| Versão | Data       | Alterações Principais | Autor                                                 |
+| ------ |------------|-----------------------|-------------------------------------------------------|
+| 1.0    | 23/01/2025 | Criação do PBB        | [Cayo alencar](https://github.com/Cayoalencar) e [Jefferson Sena](https://github.com/JeffersonSenaa) |

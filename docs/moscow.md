@@ -5,3 +5,9 @@ O MoSCoW é uma técnica de priorização utilizada para classificar requisitos 
 
 ## Diagrama
 ![Moscow](./img/moscow.png)
+
+## Histórico de Versões
+
+| Versão | Data       | Alterações Principais | Autor                                                 |
+| ------ |------------|-----------------------|-------------------------------------------------------|
+| 1.0    | 23/01/2025 | Criação do PBB        | [Cayo alencar](https://github.com/Cayoalencar) |

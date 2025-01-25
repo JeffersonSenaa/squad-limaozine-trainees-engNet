@@ -17,3 +17,10 @@ O Moovit é um aplicativo de mobilidade urbana que fornece informações em temp
 | Moovit |    É um aplicativo Mobile |
 |      Que      |  Proporciona uma experiência de viagem prática e segura  |            Joomla        |
 | Nosso produto | Disponibiliza Recursos  que proporcionam maior interatividade para viajar com transportes públicos.  |
+
+
+## Histórico de Versões
+
+| Versão | Data       | Alterações Principais       | Autor                |
+| ------ |------------|-----------------------------|----------------------|
+| 1.0    | 22/01/2025 | Criação da visão do produto | [Jefferson Sena](https://github.com/JeffersonSenaa)|

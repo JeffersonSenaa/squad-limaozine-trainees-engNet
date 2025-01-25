@@ -15,3 +15,10 @@ Um User Story Map é uma ferramenta visual usada para planejar e organizar as fu
 ![Canvas](./img/usm-4.png)
 ![Canvas](./img/usm-5.png)
 ![Canvas](./img/usm-6.png)
+
+
+## Histórico de Versões
+
+| Versão | Data       | Alterações Principais     | Autor                                                                                       |
+| ------ |------------|---------------------------|---------------------------------------------------------------------------------------------|
+| 1.0    | 22/01/2025 | Criação do user story map | [Cayo Alencar](https://github.com/Cayoalencar) e [Luis](https://github.com/Luis-Henrique05) |

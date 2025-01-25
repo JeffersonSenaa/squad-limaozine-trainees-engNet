@@ -5,3 +5,9 @@ O Product Backlog Building (PBB) é uma técnica colaborativa que combina práti
 ### Canvas PBB
 
 ![Canvas](./img/pbb.png)
+
+## Histórico de Versões
+
+| Versão | Data       | Alterações Principais | Autor                                                 |
+| ------ |------------|-----------------------|-------------------------------------------------------|
+| 1.0    | 23/01/2025 | Criação do PBB        | [Cayo alencar](https://github.com/Cayoalencar) e [Jefferson Sena](https://github.com/JeffersonSenaa) |

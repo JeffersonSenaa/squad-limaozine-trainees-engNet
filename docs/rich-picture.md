@@ -21,3 +21,9 @@ O brainstorm é uma técnica colaborativa utilizada para gerar ideias, identific
 O Brainstorm foi desenvolvido por todo grupo, mas por motivos técnicos o audio não foi carregado. Segue o vídeo:
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/wmLmOpy-0oo?si=IS43GFiPn0ToGXbC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </center>
+
+## Histórico de Versões
+
+| Versão | Data       | Alterações Principais   | Autor                                    |
+| ------ |------------|-------------------------|------------------------------------------|
+| 1.0    | 23/01/2025 | Criação do rich-picture | [Bernardo](https://github.com/bermardoo) |

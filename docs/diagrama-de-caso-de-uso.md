@@ -9,8 +9,8 @@ Um diagrama de caso de uso é uma representação visual que descreve as intera�
 ## Histórico de Versões
 
 | Versão | Data       | Alterações Principais              | Autor                        |
-| ------ | ---------- |------------------------------------| ---------------------------- |
-| 1.0    | 23/02/2025 | Criação do diagrama de caso de uso | [Ana Luíza](https://github.com/analufernanndess) |
+| ------ |------------|------------------------------------| ---------------------------- |
+| 1.0    | 25/01/2025 | Criação do diagrama de caso de uso | [Ana Luíza](https://github.com/analufernanndess) |
 
 
 

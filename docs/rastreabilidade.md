@@ -14,3 +14,8 @@ Segue a matriz de rastreabilidade completa, relacionando os requisitos (colunas)
 | Notificações                             | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✔     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✔     | ✔     | ✘     | ✘     | ✘     | ✔     | ✔     | ✔     | ✘     | ✘     | ✔     | ✘     | ✔     | ✘     | ✘     | ✔     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     |
 | Monetização (premium, anúncios)          | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     | ✔     | ✔     | ✔     | ✔     | ✔     | ✘     | ✘     | ✘     | ✘     | ✘     | ✘     |
 
+## Histórico de Versões
+
+| Versão | Data       | Alterações Principais | Autor                                                 |
+| ------ |------------|-----------------------|-------------------------------------------------------|
+| 1.0    | 23/01/2025 | Criação do PBB        | [Cayo alencar](https://github.com/Cayoalencar) e [Jefferson Sena](https://github.com/JeffersonSenaa) |
