@@ -66,3 +66,32 @@ Segue a tabela com os requisitos numerados e sua rastreabilidade:
 | US:53  | REQ53              | Poder pular anúncios.                                                                                                                                       | Monetização             |
 | US:54  | REQ54              | Assinar plano premium para navegar sem anúncios e compartilhar a localização com contatos de segurança.                                                     | Monetização             |
 
+## Requisitos Não Funcionais
+
+| **ID**    | **Descrição do Requisito Não Funcional**                                                                                 | **Categoria**              |
+|-----------|-------------------------------------------------------------------------------------------------------------------------|----------------------------|
+| **RNF01** | O sistema deve ser capaz de suportar até 10.000 acessos simultâneos sem degradação significativa de desempenho.           | Desempenho                 |
+| **RNF02** | O tempo de carregamento das telas deve ser inferior a 3 segundos em 90% dos casos, em uma conexão de internet de 5 Mbps. | Desempenho                 |
+| **RNF03** | O sistema deve estar disponível 99,9% do tempo, com exceção de janelas de manutenção programadas.                        | Disponibilidade            |
+| **RNF04** | Todos os dados do usuário devem ser armazenados e transmitidos usando criptografia AES-256.                              | Segurança                  |
+| **RNF05** | O sistema deve ser compatível com os navegadores mais recentes (Chrome, Firefox, Safari, Edge) e suas duas últimas versões. | Compatibilidade            |
+| **RNF06** | A interface do usuário deve ser responsiva, garantindo boa usabilidade em dispositivos móveis, tablets e desktops.      | Usabilidade                |
+| **RNF07** | O sistema deve fornecer suporte a leitores de tela para garantir acessibilidade a usuários com deficiência visual.       | Acessibilidade             |
+| **RNF08** | Legendas devem estar disponíveis para todos os conteúdos multimídia, como vídeos e tutoriais.                           | Acessibilidade             |
+| **RNF09** | O aplicativo deve ser desenvolvido de forma modular para facilitar manutenção e futuras extensões de funcionalidade.     | Manutenibilidade           |
+| **RNF10** | Logs de acesso e operação devem ser registrados e armazenados por no mínimo 180 dias.                                   | Monitoramento              |
+| **RNF11** | O sistema deve suportar múltiplos idiomas, com possibilidade de fácil adição de novas traduções.                        | Internacionalização        |
+| **RNF12** | A base de dados deve ser escalável horizontalmente para acomodar o crescimento do número de usuários.                   | Escalabilidade             |
+| **RNF13** | O sistema deve estar em conformidade com a LGPD (Lei Geral de Proteção de Dados).                                       | Conformidade               |
+| **RNF14** | O suporte técnico deve estar disponível em horário comercial com tempo de resposta de até 24 horas úteis.               | Suporte                    |
+| **RNF15** | Deve haver documentação detalhada para desenvolvedores e usuários finais.                                               | Documentação               |
+| **RNF16** | O sistema deve oferecer um tempo de recuperação de desastres (RTO) de até 4 horas.                                      | Recuperação de Desastres   |
+| **RNF17** | O contraste de cores utilizado no sistema deve estar em conformidade com o padrão WCAG 2.1 (nível AA ou superior).          | Acessibilidade     |
+| **RNF18** | Todos os elementos interativos (botões, links, menus) devem ser navegáveis exclusivamente pelo teclado.                     | Acessibilidade     |
+| **RNF19** | O sistema deve fornecer notificações e mensagens de erro que sejam compreensíveis por leitores de tela.                     | Acessibilidade     |
+| **RNF20** | Deve ser possível aumentar ou diminuir o tamanho do texto em pelo menos 200% sem perda de funcionalidade.                   | Acessibilidade     |
+| **RNF21** | O sistema deve incluir descrições alternativas (atributo `alt`) para todas as imagens relevantes no aplicativo.              | Acessibilidade     |
+| **RNF22** | O sistema deve oferecer suporte para navegação por voz em dispositivos compatíveis, como assistentes virtuais.              | Acessibilidade     |
+| **RNF23** | Deve haver suporte para layouts de alto contraste configuráveis pelo usuário.                                               | Acessibilidade     |
+| **RNF24** | O sistema deve permitir que o usuário escolha entre múltiplos modos de entrada, como teclado, mouse e dispositivos táteis.  | Acessibilidade     |
+| **RNF25** | Deve ser fornecido um guia de acessibilidade em formato digital, com instruções detalhadas sobre como usar o sistema.       | Acessibilidade     |
