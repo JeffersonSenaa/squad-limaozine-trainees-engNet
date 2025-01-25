@@ -39,6 +39,7 @@ Os artefatos produzidos nesta etapa incluem:
 - Casos de Uso: Diagramas e descrições textuais detalhando os principais casos de uso identificados.
 - Rich picture: Diagrama que representa, de forma criativa e não estruturada, os elementos-chave de uma situação problemática..
 - Matriz de Rastreabilidade: Documento ou ferramenta que relaciona requisitos a outros artefatos do projeto, como casos de uso, código, testes ou entregas.
+- Brainstorm: Vídeo do levantamento de ideias de funcionalidades do app através da chuva de ideias. 
 
 
 ## Trainees
