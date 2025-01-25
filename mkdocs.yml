@@ -9,6 +9,8 @@ theme:
     repo: fontawesome/brands/github
   palette: 
     - scheme: default
+      primary: orange
+      accent: indigo
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
@@ -18,6 +20,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   name: material
+  # logo: 
   features:
     - navigation.tabs
     - navigation.tabs.sticky
