@@ -1,0 +1,4432 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../rastreabilidade/">
+      
+      
+        <link rel="next" href="../diagrama-de-caso-de-uso/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Caso de uso - Squad Limaozine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#caso-de-uso" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Squad Limaozine" class="md-header__button md-logo" aria-label="Squad Limaozine" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/JeffersonSenaa/squad-limaozine-trainees-engNet/refs/heads/main/docs/img/moovit.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Squad Limaozine
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Caso de uso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JeffersonSenaa/squad-limaozine-trainees-engNet.git" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    squad-limaozine-trainees-engNet
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../visao-produto/" class="md-tabs__link">
+          
+  
+  Levantamento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../user-story/" class="md-tabs__link">
+          
+  
+  Modelagem
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../rastreabilidade/" class="md-tabs__link">
+        
+  
+    
+  
+  Rastreabilidade
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Caso de uso
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Squad Limaozine" class="md-nav__button md-logo" aria-label="Squad Limaozine" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/JeffersonSenaa/squad-limaozine-trainees-engNet/refs/heads/main/docs/img/moovit.png" alt="logo">
+
+    </a>
+    Squad Limaozine
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JeffersonSenaa/squad-limaozine-trainees-engNet.git" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    squad-limaozine-trainees-engNet
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Levantamento
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Levantamento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão do Produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rich-picture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rich Picture/Brainstorm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modelagem
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Modelagem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-story/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Story Map
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pbb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Backlog Building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../moscow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Priorização
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rastreabilidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rastreabilidade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Caso de uso
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Caso de uso
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Caso de uso
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Caso de uso
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc01-fazer-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC01: Fazer Login
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC01: Fazer Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc02-cadastrar-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC02: Cadastrar Usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC02: Cadastrar Usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc03-conectar-conta-google-ou-facebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC03: Conectar Conta Google ou Facebook
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC03: Conectar Conta Google ou Facebook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc04-definirdo-tipo-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC04: Definirdo Tipo de Usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC04: Definirdo Tipo de Usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc05-acessar-ao-itinerario-de-onibus" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC05: Acessar ao Itinerário de Ônibus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC05: Acessar ao Itinerário de Ônibus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc06-ver-a-localizacao-dos-onibus-em-tempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC06: Ver a Localização dos Ônibus em Tempo Real
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC06: Ver a Localização dos Ônibus em Tempo Real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc07-ver-as-estacoes-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC07: Ver as Estações Disponíveis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC07: Ver as Estações Disponíveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc08-visualizar-rotas-ate-estacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC08: Visualizar Rotas até Estação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC08: Visualizar Rotas até Estação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc09-visualizar-mapa-interativo-para-localizacao-das-estacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC09: Visualizar Mapa Interativo para Localização das Estações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC09: Visualizar Mapa Interativo para Localização das Estações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc10-visualizar-rota-ate-a-estacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC10: Visualizar Rota até a Estação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC10: Visualizar Rota até a Estação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc11-visualizar-tempo-estimado-da-viagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC11: Visualizar Tempo Estimado da Viagem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC11: Visualizar Tempo Estimado da Viagem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc12-integrar-com-aplicativos-de-transporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC12: Integrar com Aplicativos de Transporte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC12: Integrar com Aplicativos de Transporte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc13-consultar-onibus" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC13: Consultar Ônibus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC13: Consultar Ônibus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc14-descrever-a-linha" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC14: Descrever a Linha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC14: Descrever a Linha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc15-visualizar-estacoes-de-metro" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC15: Visualizar Estações de Metrô
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC15: Visualizar Estações de Metrô">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc16-visualizar-rotas-de-bicicleta-e-caminhada" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC16: Visualizar rotas de Bicicleta e Caminhada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC16: Visualizar rotas de Bicicleta e Caminhada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc17-integrar-entre-rotas-de-onibus" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC17: Integrar entre Rotas de Ônibus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC17: Integrar entre Rotas de Ônibus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc18-avisar-proximidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC18: Avisar Proximidade
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC18: Avisar Proximidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc19-notificar-alteracao-de-rota-em-tempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC19: Notificar Alteração de Rota em Tempo Real
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC19: Notificar Alteração de Rota em Tempo Real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc20-mostrar-rotas-favoritas-e-mais-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC20: Mostrar Rotas Favoritas e Mais Utilizadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC20: Mostrar Rotas Favoritas e Mais Utilizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc21-mostrar-opcoes-de-rotas-com-tempo-e-custo" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC21: Mostrar Opções de Rotas com Tempo e Custo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC21: Mostrar Opções de Rotas com Tempo e Custo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc22-ver-horario-de-saida-ou-chegada" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC22: Ver Horário de Saída ou Chegada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC22: Ver Horário de Saída ou Chegada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc23-utilizar-versao-gratuita" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC23: Utilizar versão gratuíta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC23: Utilizar versão gratuíta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc24-utilizar-versao-paga" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC24: Utilizar versão paga
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC24: Utilizar versão paga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrama-de-caso-de-uso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de caso de uso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc01-fazer-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC01: Fazer Login
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC01: Fazer Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc02-cadastrar-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC02: Cadastrar Usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC02: Cadastrar Usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc03-conectar-conta-google-ou-facebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC03: Conectar Conta Google ou Facebook
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC03: Conectar Conta Google ou Facebook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc04-definirdo-tipo-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC04: Definirdo Tipo de Usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC04: Definirdo Tipo de Usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc05-acessar-ao-itinerario-de-onibus" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC05: Acessar ao Itinerário de Ônibus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC05: Acessar ao Itinerário de Ônibus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc06-ver-a-localizacao-dos-onibus-em-tempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC06: Ver a Localização dos Ônibus em Tempo Real
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC06: Ver a Localização dos Ônibus em Tempo Real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc07-ver-as-estacoes-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC07: Ver as Estações Disponíveis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC07: Ver as Estações Disponíveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc08-visualizar-rotas-ate-estacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC08: Visualizar Rotas até Estação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC08: Visualizar Rotas até Estação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc09-visualizar-mapa-interativo-para-localizacao-das-estacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC09: Visualizar Mapa Interativo para Localização das Estações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC09: Visualizar Mapa Interativo para Localização das Estações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc10-visualizar-rota-ate-a-estacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC10: Visualizar Rota até a Estação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC10: Visualizar Rota até a Estação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc11-visualizar-tempo-estimado-da-viagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC11: Visualizar Tempo Estimado da Viagem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC11: Visualizar Tempo Estimado da Viagem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc12-integrar-com-aplicativos-de-transporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC12: Integrar com Aplicativos de Transporte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC12: Integrar com Aplicativos de Transporte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc13-consultar-onibus" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC13: Consultar Ônibus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC13: Consultar Ônibus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc14-descrever-a-linha" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC14: Descrever a Linha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC14: Descrever a Linha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc15-visualizar-estacoes-de-metro" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC15: Visualizar Estações de Metrô
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC15: Visualizar Estações de Metrô">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc16-visualizar-rotas-de-bicicleta-e-caminhada" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC16: Visualizar rotas de Bicicleta e Caminhada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC16: Visualizar rotas de Bicicleta e Caminhada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc17-integrar-entre-rotas-de-onibus" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC17: Integrar entre Rotas de Ônibus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC17: Integrar entre Rotas de Ônibus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc18-avisar-proximidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC18: Avisar Proximidade
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC18: Avisar Proximidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc19-notificar-alteracao-de-rota-em-tempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC19: Notificar Alteração de Rota em Tempo Real
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC19: Notificar Alteração de Rota em Tempo Real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc20-mostrar-rotas-favoritas-e-mais-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC20: Mostrar Rotas Favoritas e Mais Utilizadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC20: Mostrar Rotas Favoritas e Mais Utilizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc21-mostrar-opcoes-de-rotas-com-tempo-e-custo" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC21: Mostrar Opções de Rotas com Tempo e Custo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC21: Mostrar Opções de Rotas com Tempo e Custo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc22-ver-horario-de-saida-ou-chegada" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC22: Ver Horário de Saída ou Chegada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC22: Ver Horário de Saída ou Chegada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc23-utilizar-versao-gratuita" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC23: Utilizar versão gratuíta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC23: Utilizar versão gratuíta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc24-utilizar-versao-paga" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC24: Utilizar versão paga
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC24: Utilizar versão paga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-descricao_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breve Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-principal_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-alternativos_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos Alternativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxos-de-excecao_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxos de Exceção
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="caso-de-uso">Caso de uso</h1>
+<h2 id="definicao">Definição:</h2>
+<p>Um caso de uso é uma descrição detalhada de como os usuários (ou outros sistemas) interagem com um sistema para alcançar um objetivo específico. Ele é utilizado na análise e design de sistemas para documentar os requisitos funcionais de forma clara e compreensível.</p>
+<h2 id="uc01-fazer-login">UC01: Fazer Login</h2>
+<h3 id="breve-descricao">Breve Descrição</h3>
+<p>Permite que o usuário faça login no aplicativo utilizando e-mail e senha cadastrados.</p>
+<h3 id="atores">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal">Fluxo Principal</h3>
+<ol>
+<li>O sistema apresenta a tela de login.</li>
+<li>O usuário insere o e-mail e a senha.</li>
+<li>O sistema valida as credenciais fornecidas.</li>
+<li>O sistema redireciona o usuário para a tela inicial.</li>
+</ol>
+<h3 id="fluxos-alternativos">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Recuperação de Senha</strong>:<ul>
+<li>O usuário seleciona "Esqueci minha senha".</li>
+<li>O sistema solicita o e-mail cadastrado.</li>
+<li>O sistema envia um link para redefinição de senha ao e-mail fornecido.</li>
+<li>O usuário redefine sua senha e retorna à tela de login.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Credenciais Inválidas</strong>:<ul>
+<li>Ocorre no passo 3 do fluxo principal, caso o e-mail ou senha estejam incorretos.</li>
+<li>O sistema exibe uma mensagem de erro e retorna à tela de login.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc02-cadastrar-usuario">UC02: Cadastrar Usuário</h2>
+<h3 id="breve-descricao_1">Breve Descrição</h3>
+<p>Permite que novos usuários se registrem no aplicativo fornecendo informações básicas, como e-mail e senha.</p>
+<h3 id="atores_1">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_1">Fluxo Principal</h3>
+<ol>
+<li>O sistema apresenta a tela de cadastro.</li>
+<li>O usuário insere e-mail, senha e outros dados obrigatórios.</li>
+<li>O sistema valida as informações fornecidas.</li>
+<li>O sistema confirma o cadastro com uma mensagem de sucesso.</li>
+</ol>
+<h3 id="fluxos-alternativos_1">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Campos Não Preenchidos</strong>:<ul>
+<li>Ocorre no passo 2 do Fluxo Principal, caso algum campo obrigatório não seja preenchido.</li>
+<li>O sistema exibe uma mensagem de erro e solicita o preenchimento dos campos.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_1">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Formato Inválido de Dados</strong>:<ul>
+<li>Ocorre no passo 3 do Fluxo Principal, caso os dados inseridos não atendam aos requisitos.</li>
+<li>O sistema exibe uma mensagem indicando o formato correto e retorna à tela de cadastro.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc03-conectar-conta-google-ou-facebook">UC03: Conectar Conta Google ou Facebook</h2>
+<h3 id="breve-descricao_2">Breve Descrição</h3>
+<p>Permite que os usuários acessem o aplicativo utilizando suas contas do Google ou Facebook.</p>
+<h3 id="atores_2">Atores</h3>
+<ul>
+<li>Usuário</li>
+<li>Google API</li>
+<li>Facebook API</li>
+</ul>
+<h3 id="fluxo-principal_2">Fluxo Principal</h3>
+<ol>
+<li>O sistema apresenta botões para login com Google e Facebook.</li>
+<li>O usuário seleciona uma das opções.</li>
+<li>O sistema redireciona para a autenticação na plataforma escolhida.</li>
+<li>O sistema valida as credenciais e redireciona para a tela inicial.</li>
+</ol>
+<h3 id="fluxos-alternativos_2">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Usuário Já Autenticado</strong>:<ul>
+<li>Ocorre no passo 2 do fluxo principal, caso o usuário já esteja autenticado.</li>
+<li>O sistema redireciona diretamente para a tela inicial sem necessidade de nova autenticação.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_2">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro na Conexão com API</strong>:<ul>
+<li>Ocorre no passo 3 do fluxo principal, caso a conexão com a API falhe.</li>
+<li>O sistema apresenta uma mensagem de erro e sugere tentar novamente mais tarde.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc04-definirdo-tipo-de-usuario">UC04: Definirdo Tipo de Usuário</h2>
+<h3 id="breve-descricao_3">Breve Descrição</h3>
+<p>Permite que o usuário defina o seu tipo durante o cadastro, personalizando o aplicativo para suas necessidades.</p>
+<h3 id="atores_3">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_3">Fluxo Principal</h3>
+<ol>
+<li>O sistema apresenta as opções de tipo de usuário durante o cadastro.</li>
+<li>O usuário seleciona uma opção.</li>
+<li>O sistema ajusta as funcionalidades do aplicativo de acordo com o tipo selecionado.</li>
+</ol>
+<h3 id="fluxos-alternativos_3">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Alteração do Tipo de Usuário Após Cadastro</strong>:<ul>
+<li>O usuário acessa a funcionalidade de perfil para alterar o tipo de usuário configurado.</li>
+<li>O sistema atualiza as funcionalidades de acordo com a nova seleção.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_3">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro ao Salvar Tipo de Usuário</strong>:<ul>
+<li>Ocorre no passo 3 do fluxo principal, caso haja falha ao salvar a seleção.</li>
+<li>O sistema exibe uma mensagem de erro e retorna à tela de cadastro.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc05-acessar-ao-itinerario-de-onibus">UC05: Acessar ao Itinerário de Ônibus</h2>
+<h3 id="breve-descricao_4">Breve Descrição</h3>
+<p>Permite que o usuário visualize o itinerário completo de uma linha de ônibus, incluindo horários e paradas.</p>
+<h3 id="atores_4">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_4">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de itinerários.</li>
+<li>O sistema apresenta uma lista de linhas disponíveis.</li>
+<li>O usuário seleciona uma linha.</li>
+<li>O sistema apresenta o itinerário da linha escolhida.</li>
+</ol>
+<h3 id="fluxos-alternativos_4">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Filtragem de Linhas</strong>:<ul>
+<li>O usuário aplica filtros, como horário ou direção, para visualizar apenas as linhas de interesse.</li>
+<li>O sistema atualiza a lista de linhas disponíveis com base nos critérios aplicados.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_4">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Linha Não Encontrada</strong>:<ul>
+<li>Ocorre no passo 3 do fluxo principal, caso a linha selecionada não esteja cadastrada no sistema.</li>
+<li>O sistema exibe uma mensagem de erro e retorna à lista de linhas.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc06-ver-a-localizacao-dos-onibus-em-tempo-real">UC06: Ver a Localização dos Ônibus em Tempo Real</h2>
+<h3 id="breve-descricao_5">Breve Descrição</h3>
+<p>Permite que o usuário visualize a localização em tempo real de um ônibus em uma linha selecionada.</p>
+<h3 id="atores_5">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_5">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de localização.</li>
+<li>O sistema apresenta as linhas disponíveis para monitoramento.</li>
+<li>O usuário seleciona uma linha.</li>
+<li>O sistema exibe a localização em tempo real dos ônibus daquela linha.</li>
+</ol>
+<h3 id="fluxos-alternativos_5">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Configuração de Alertas</strong>:<ul>
+<li>O usuário configura alertas para ser notificado quando o ônibus estiver próximo a uma parada específica.</li>
+<li>O sistema ativa o monitoramento e envia notificações conforme configurado.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_5">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro no Monitoramento</strong>:<ul>
+<li>Ocorre no passo 4 do fluxo principal, caso o sistema não consiga recuperar os dados de localização.</li>
+<li>O sistema exibe uma mensagem de erro e sugere tentar novamente mais tarde.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc07-ver-as-estacoes-disponiveis">UC07: Ver as Estações Disponíveis</h2>
+<h3 id="breve-descricao_6">Breve Descrição</h3>
+<p>Permite que o usuário visualize as estações próximas para selecionar a mais conveniente para sua rota.</p>
+<h3 id="atores_6">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_6">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de estações.</li>
+<li>O sistema exibe as estações disponíveis e suas localizações.</li>
+<li>O usuário escolhe uma estação para mais detalhes.</li>
+<li>O sistema exibe as informações da estação selecionada.</li>
+</ol>
+<h3 id="fluxos-alternativos_6">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Ordenação das Estações</strong>:<ul>
+<li>O usuário altera a ordenação das estações exibidas.</li>
+<li>O sistema atualiza a lista de estações com base nos critérios de ordenação selecionados.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_6">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro ao Carregar Estações</strong>:<ul>
+<li>Ocorre no passo 2 do fluxo principal, caso o sistema não consiga carregar as estações disponíveis.</li>
+<li>O sistema exibe uma mensagem de erro e retorna à tela inicial.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc08-visualizar-rotas-ate-estacao">UC08: Visualizar Rotas até Estação</h2>
+<h3 id="breve-descricao_7">Breve Descrição</h3>
+<p>Permite que o usuário visualize todas as rotas disponíveis em uma estação selecionada.</p>
+<h3 id="atores_7">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_7">Fluxo Principal</h3>
+<ol>
+<li>O usuário seleciona uma estação.</li>
+<li>O sistema exibe todas as rotas disponíveis naquela estação.</li>
+<li>O usuário escolhe uma rota para mais detalhes.</li>
+<li>O sistema exibe as informações da rota selecionada.</li>
+</ol>
+<h3 id="fluxos-alternativos_7">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Filtragem de Rotas</strong>:<ul>
+<li>O usuário aplica filtros, como tipo de transporte ou destino final, para visualizar apenas rotas específicas.</li>
+<li>O sistema atualiza a lista de rotas disponíveis com base nos critérios aplicados.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_7">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Rota Não Encontrada</strong>:<ul>
+<li>Ocorre no passo 3 do fluxo principal, caso a rota escolhida não esteja disponível.</li>
+<li>O sistema exibe uma mensagem de erro e retorna à lista de rotas.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc09-visualizar-mapa-interativo-para-localizacao-das-estacoes">UC09: Visualizar Mapa Interativo para Localização das Estações</h2>
+<h3 id="breve-descricao_8">Breve Descrição</h3>
+<p>Permite que o usuário utilize um mapa interativo para localizar estações próximas.</p>
+<h3 id="atores_8">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_8">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa no aplicativo.</li>
+<li>O usuario clica em estações.</li>
+<li>O usuário seleciona uma estação no mapa.</li>
+<li>O sistema exibe as informações detalhadas da estação selecionada.</li>
+</ol>
+<h3 id="fluxos-alternativos_8">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Mudança de Escala no Mapa</strong>:<ul>
+<li>O usuário ajusta a escala do mapa para visualizar estações em uma área maior ou menor.</li>
+<li>O sistema atualiza a exibição das estações conforme a nova escala definida.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_8">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Internet desconectada</strong>:<ul>
+<li>Ocorre no passo 2 do fluxo principal, caso a internet esteja desconectada.</li>
+<li>O sistema exibe uma mensagem de erro.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc10-visualizar-rota-ate-a-estacao">UC10: Visualizar Rota até a Estação</h2>
+<h3 id="breve-descricao_9">Breve Descrição</h3>
+<p>Permite que o usuário visualize a rota para chegar a uma estação específica.</p>
+<h3 id="atores_9">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_9">Fluxo Principal</h3>
+<ol>
+<li>O usuário seleciona uma estação desejada.</li>
+<li>O sistema exibe as opções de rotas disponíveis para chegar até essa estação.</li>
+<li>O usuário escolhe a rota mais adequada.</li>
+<li>O sistema apresenta o percurso detalhado até a estação.</li>
+</ol>
+<h3 id="fluxos-alternativos_9">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Escolha por Meio de Transporte</strong>:<ul>
+<li>O usuário filtra as rotas disponíveis por meio de transporte (ex.: a pé, bicicleta, carro).</li>
+<li>O sistema atualiza as opções de rotas com base na escolha do usuário.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_9">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro ao Carregar Rotas</strong>:<ul>
+<li>Ocorre no passo 2 do fluxo principal, caso o sistema não consiga carregar as rotas disponíveis.</li>
+<li>O sistema exibe uma mensagem de erro e sugere tentar novamente mais tarde.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc11-visualizar-tempo-estimado-da-viagem">UC11: Visualizar Tempo Estimado da Viagem</h2>
+<h3 id="breve-descricao_10">Breve Descrição</h3>
+<p>Permite que o usuário visualize o tempo estimado de viagem para cada rota disponível.</p>
+<h3 id="atores_10">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_10">Fluxo Principal</h3>
+<ol>
+<li>O usuário seleciona uma rota.</li>
+<li>O sistema calcula o tempo estimado de viagem com base nas condições atuais.</li>
+<li>O sistema exibe o tempo estimado para o usuário.</li>
+</ol>
+<h3 id="fluxos-alternativos_10">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Comparação entre Rotas</strong>:<ul>
+<li>O usuário seleciona várias rotas para comparar seus tempos estimados de viagem.</li>
+<li>O sistema exibe um resumo comparativo das rotas selecionadas.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_10">Fluxos de Exceção</h3>
+<p>N/A</p>
+<hr />
+<h2 id="uc12-integrar-com-aplicativos-de-transporte">UC12: Integrar com Aplicativos de Transporte</h2>
+<h3 id="breve-descricao_11">Breve Descrição</h3>
+<p>Permite que o usuário integre o aplicativo com outros serviços de transporte, como Uber.</p>
+<h3 id="atores_11">Atores</h3>
+<ul>
+<li>Usuário</li>
+<li>Serviços de transporte externos</li>
+</ul>
+<h3 id="fluxo-principal_11">Fluxo Principal</h3>
+<ol>
+<li>O sistema apresenta opções de aplicativos de transporte disponíveis.</li>
+<li>O usuário seleciona um aplicativo para integração.</li>
+<li>O sistema redireciona o usuário para o aplicativo escolhido.</li>
+</ol>
+<h3 id="fluxos-alternativos_11">Fluxos Alternativos</h3>
+<p>N/A</p>
+<h3 id="fluxos-de-excecao_11">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro na Conexão com Serviço Externo</strong>:<ul>
+<li>Ocorre no passo 3 do fluxo principal, caso o sistema não consiga se conectar ao serviço externo.</li>
+<li>O sistema direciona o usuário para baixar o aplicativo.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc13-consultar-onibus">UC13: Consultar Ônibus</h2>
+<h3 id="breve-descricao_12">Breve Descrição</h3>
+<p>Permite que o usuário consulte informações detalhadas sobre uma linha de ônibus específica.</p>
+<h3 id="atores_12">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_12">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de consulta de ônibus.</li>
+<li>O sistema solicita o número ou nome da linha desejada.</li>
+<li>O usuário insere as informações solicitadas.</li>
+<li>O sistema exibe os detalhes da linha, incluindo itinerário, horários e localização atual.</li>
+</ol>
+<h3 id="fluxos-alternativos_12">Fluxos Alternativos</h3>
+<p>N/A</p>
+<h3 id="fluxos-de-excecao_12">Fluxos de Exceção</h3>
+<p>N/A</p>
+<hr />
+<h2 id="uc14-descrever-a-linha">UC14: Descrever a Linha</h2>
+<h3 id="breve-descricao_13">Breve Descrição</h3>
+<p>Permite que o usuário visualize a descrição completa de uma linha de ônibus ou metrô.</p>
+<h3 id="atores_13">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_13">Fluxo Principal</h3>
+<ol>
+<li>O usuário seleciona uma linha para mais informações.</li>
+<li>O sistema exibe a descrição completa da linha e detalhes do percurso.</li>
+</ol>
+<h3 id="fluxos-alternativos_13">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Visualização de Ponto Específico</strong>:<ul>
+<li>O usuário seleciona um ponto específico da linha para mais informações (ex.: horários de chegada).</li>
+<li>O sistema apresenta os detalhes referentes ao ponto selecionado.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_13">Fluxos de Exceção</h3>
+<p>N/A</p>
+<hr />
+<h2 id="uc15-visualizar-estacoes-de-metro">UC15: Visualizar Estações de Metrô</h2>
+<h3 id="breve-descricao_14">Breve Descrição</h3>
+<p>Permite que o usuário visualize todas as estações de metrô próximas e informações relevantes sobre elas.</p>
+<h3 id="atores_14">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_14">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de estações de metrô.</li>
+<li>O sistema exibe uma lista das estações próximas e suas localizações.</li>
+<li>O usuário seleciona uma estação para visualizar mais detalhes.</li>
+<li>O sistema apresenta as informações detalhadas da estação selecionada.</li>
+</ol>
+<h3 id="fluxos-alternativos_14">Fluxos Alternativos</h3>
+<p>N/A</p>
+<h3 id="fluxos-de-excecao_14">Fluxos de Exceção</h3>
+<p>N/A</p>
+<hr />
+<h2 id="uc16-visualizar-rotas-de-bicicleta-e-caminhada">UC16: Visualizar rotas de Bicicleta e Caminhada</h2>
+<h3 id="breve-descricao_15">Breve Descrição</h3>
+<p>Permite que o usuário visualize rotas seguras para ciclistas ou trajetos a pé até o destino selecionado.</p>
+<h3 id="atores_15">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_15">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de rotas de bicicleta ou caminhada.</li>
+<li>O sistema solicita o destino desejado.</li>
+<li>O usuário insere o destino.</li>
+<li>O sistema apresenta as rotas disponíveis com informações detalhadas.</li>
+</ol>
+<h3 id="fluxos-alternativos_15">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Seleção por Tipo de Rota</strong>:<ul>
+<li>O usuário filtra as rotas por nível de tempo estimado.</li>
+<li>O sistema atualiza as opções de rotas disponíveis com base nos critérios aplicados.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_15">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro ao Carregar Rotas</strong>:<ul>
+<li>Ocorre no passo 4 do fluxo principal, caso o sistema não consiga recuperar as rotas.</li>
+<li>O sistema exibe uma mensagem de erro e retorna à tela inicial.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc17-integrar-entre-rotas-de-onibus">UC17: Integrar entre Rotas de Ônibus</h2>
+<h3 id="breve-descricao_16">Breve Descrição</h3>
+<p>Permite que o usuário planeje trajetos integrados entre diferentes rotas de ônibus, considerando o menor tempo de espera entre conexões.</p>
+<h3 id="atores_16">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_16">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de integração entre rotas.</li>
+<li>O sistema solicita o ponto de origem e destino.</li>
+<li>O usuário insere as informações solicitadas.</li>
+<li>O sistema exibe as opções de trajetos integrados, ordenados pelo menor tempo de espera.</li>
+<li>O usuário seleciona a opção desejada.</li>
+<li>O sistema apresenta o trajeto detalhado.</li>
+</ol>
+<h3 id="fluxos-alternativos_16">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Alteração de Parâmetros de Busca</strong>:<ul>
+<li>Ocorre no passo 4 do fluxo principal, caso o usuário deseje ajustar os parâmetros de origem, destino ou preferências.</li>
+<li>O sistema atualiza as opções de trajetos com base nos novos parâmetros fornecidos.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_16">Fluxos de Exceção</h3>
+<p>N/A</p>
+<hr />
+<h2 id="uc18-avisar-proximidade">UC18: Avisar Proximidade</h2>
+<h3 id="breve-descricao_17">Breve Descrição</h3>
+<p>Permite que o usuário receba notificações quando o ônibus estiver próximo ao ponto.</p>
+<h3 id="atores_17">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_17">Fluxo Principal</h3>
+<ol>
+<li>O sistema monitora a localização do ônibus em tempo real.</li>
+<li>Quando o ônibus estiver próximo ao ponto configurado, o aplicativo mostra ao usuário.</li>
+</ol>
+<h3 id="fluxos-alternativos_17">Fluxos Alternativos</h3>
+<p>N/A</p>
+<h3 id="fluxos-de-excecao_17">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro no Monitoramento</strong>:<ul>
+<li>Ocorre no passo 2 do fluxo principal, caso o sistema não consiga monitorar a localização do ônibus.</li>
+<li>O sistema não mostra para o usuário a aproximidade.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc19-notificar-alteracao-de-rota-em-tempo-real">UC19: Notificar Alteração de Rota em Tempo Real</h2>
+<h3 id="breve-descricao_18">Breve Descrição</h3>
+<p>Permite que o usuário seja avisado sobre mudanças no trajeto de sua rota em tempo real, para evitar atrasos inesperados.</p>
+<h3 id="atores_18">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_18">Fluxo Principal</h3>
+<ol>
+<li>O sistema monitora a rota configurada pelo usuário.</li>
+<li>O sistema detecta uma alteração no trajeto.</li>
+<li>O sistema envia uma notificação ao usuário informando a mudança e sugerindo alternativas, se aplicável.</li>
+</ol>
+<h3 id="fluxos-alternativos_18">Fluxos Alternativos</h3>
+<p>N/A</p>
+<h3 id="fluxos-de-excecao_18">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro na Detecção de Alterações</strong>:<ul>
+<li>Ocorre no passo 2 do fluxo principal, caso o sistema não consiga identificar alterações na rota.</li>
+<li>O sistema exibe uma mensagem genérica indicando que o monitoramento está indisponível.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc20-mostrar-rotas-favoritas-e-mais-utilizadas">UC20: Mostrar Rotas Favoritas e Mais Utilizadas</h2>
+<h3 id="breve-descricao_19">Breve Descrição</h3>
+<p>Permite que o usuário salve rotas favoritas para acessá-las rapidamente ou visualize as rotas mais utilizadas com base em seu histórico.</p>
+<h3 id="atores_19">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_19">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de rotas favoritas.</li>
+<li>O sistema exibe as rotas salvas pelo usuário.</li>
+<li>O usuário seleciona uma rota favorita para mais detalhes.</li>
+</ol>
+<h3 id="fluxos-alternativos_19">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Adicionar Nova Rota Favorita</strong>:<ul>
+<li>O usuário opta por adicionar uma nova rota favorita durante a navegação.</li>
+<li>O sistema salva a rota no perfil do usuário e a exibe na lista de favoritas.</li>
+</ul>
+</li>
+<li><strong>Visualizar Rotas Mais Utilizadas</strong>:<ul>
+<li>O sistema exibe uma lista das rotas mais frequentes do usuário com base no histórico de uso.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_19">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro ao Carregar Rotas Favoritas</strong>:<ul>
+<li>Ocorre no passo 2 do fluxo principal, caso o sistema não consiga recuperar as rotas salvas.</li>
+<li>O sistema exibe uma mensagem de erro.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc21-mostrar-opcoes-de-rotas-com-tempo-e-custo">UC21: Mostrar Opções de Rotas com Tempo e Custo</h2>
+<h3 id="breve-descricao_20">Breve Descrição</h3>
+<p>Permite que o usuário visualize e compare as opções de rotas disponíveis com base no tempo estimado de viagem e custo de transporte.</p>
+<h3 id="atores_20">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_20">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de comparação de rotas.</li>
+<li>O sistema solicita o ponto de origem e destino.</li>
+<li>O usuário insere as informações solicitadas.</li>
+<li>O sistema exibe as rotas disponíveis com o tempo estimado.</li>
+<li>O usuário seleciona a rota desejada para mais detalhes.</li>
+</ol>
+<h3 id="fluxos-alternativos_20">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Alteração de Critérios de Comparação</strong>:<ul>
+<li>O sistema recalcula e exibe as rotas com base nos novos critérios fornecidos.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_20">Fluxos de Exceção</h3>
+<p>N/A</p>
+<hr />
+<h2 id="uc22-ver-horario-de-saida-ou-chegada">UC22: Ver Horário de Saída ou Chegada</h2>
+<h3 id="breve-descricao_21">Breve Descrição</h3>
+<p>Permite que o usuário programe seu trajeto considerando o horário exato de saída ou chegada para evitar atrasos.</p>
+<h3 id="atores_21">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_21">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de horários.</li>
+<li>O sistema solicita o ponto de origem, destino e horário desejado (saída ou chegada).</li>
+<li>O usuário insere as informações solicitadas.</li>
+<li>O sistema apresenta as rotas disponíveis compatíveis com o horário especificado.</li>
+</ol>
+<h3 id="fluxos-alternativos_21">Fluxos Alternativos</h3>
+<p>N/A</p>
+<h3 id="fluxos-de-excecao_21">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro ao Processar Horário</strong>:<ul>
+<li>Ocorre no passo 4 do fluxo principal, caso o sistema não consiga processar as informações de horários.</li>
+<li>O sistema exibe uma mensagem de erro e retorna à tela inicial.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="uc23-utilizar-versao-gratuita">UC23: Utilizar versão gratuíta</h2>
+<h3 id="breve-descricao_22">Breve Descrição</h3>
+<p>Permite que o usuário utilize a versão gratuita do aplicativo com anúncios exibidos.</p>
+<h3 id="atores_22">Atores</h3>
+<ul>
+<li>Usuário</li>
+</ul>
+<h3 id="fluxo-principal_22">Fluxo Principal</h3>
+<ol>
+<li>O usuário utiliza a versão gratuita do aplicativo.</li>
+<li>O sistema exibe anúncios de forma intercalada durante o uso.</li>
+</ol>
+<h3 id="fluxos-alternativos_22">Fluxos Alternativos</h3>
+<ol>
+<li><strong>Pular Anúncio</strong>:<ul>
+<li>O sistema oferece a opção de pular anúncios em alguns casos, caso aplicável.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fluxos-de-excecao_22">Fluxos de Exceção</h3>
+<p>N/A</p>
+<hr />
+<h2 id="uc24-utilizar-versao-paga">UC24: Utilizar versão paga</h2>
+<h3 id="breve-descricao_23">Breve Descrição</h3>
+<p>Permite que o usuário acesse a versão premium do aplicativo, realizando o pagamento online para desbloquear funcionalidades adicionais.</p>
+<h3 id="atores_23">Atores</h3>
+<ul>
+<li>Usuário</li>
+<li>Sistema de Pagamento Online</li>
+</ul>
+<h3 id="fluxo-principal_23">Fluxo Principal</h3>
+<ol>
+<li>O usuário acessa a funcionalidade de assinatura premium.</li>
+<li>O sistema exibe as opções de planos disponíveis.</li>
+<li>O usuário seleciona um plano e insere as informações de pagamento.</li>
+<li>O sistema processa o pagamento e confirma a assinatura.</li>
+<li>O usuário passa a ter acesso aos benefícios premium.</li>
+</ol>
+<h3 id="fluxos-alternativos_23">Fluxos Alternativos</h3>
+<p>N/A</p>
+<h3 id="fluxos-de-excecao_23">Fluxos de Exceção</h3>
+<ol>
+<li><strong>Erro no Processamento do Pagamento</strong>:<ul>
+<li>Ocorre no passo 4 do fluxo principal, caso o sistema de pagamento não consiga processar a transação.</li>
+<li>O sistema exibe uma mensagem de erro e retorna à tela de planos.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="historico-de-versoes">Histórico de Versões</h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Alterações Principais</th>
+<th>Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>25/01/2025</td>
+<td>Criação do caso de uso</td>
+<td><a href="https://github.com/analufernanndess">Ana Luíza</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>
