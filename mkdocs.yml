@@ -56,4 +56,6 @@ nav:
       - Priorização: moscow.md
       - Backlog: backlog.md
   - Rastreabilidade: rastreabilidade.md
-    
+  - Caso de uso:
+      - Caso de uso: caso-de-uso.md
+      - Diagrama de caso de uso: diagrama-de-caso-de-uso.md
