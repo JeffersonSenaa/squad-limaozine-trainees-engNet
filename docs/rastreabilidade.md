@@ -1,3 +1,6 @@
+# Rastreabilidade
+A tabela de rastreabilidade é um artefato utilizado em projetos para rastrear a relação entre os requisitos e os diferentes elementos do sistema, como casos de uso, componentes de software, testes e documentos. Ela garante que todos os requisitos sejam atendidos e que nenhuma funcionalidade crítica seja omitida durante o desenvolvimento.
+
 Segue a matriz de rastreabilidade completa, relacionando os requisitos (colunas) com as funcionalidades (linhas). Cada célula indica se o requisito atende diretamente (✔), parcialmente (○) ou não (✘) a determinada funcionalidade.
 
 ### Matriz de Rastreabilidade
